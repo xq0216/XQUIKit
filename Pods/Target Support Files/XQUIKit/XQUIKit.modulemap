@@ -1,0 +1,6 @@
+module XQUIKit {
+  umbrella header "XQUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

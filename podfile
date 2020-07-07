@@ -1,0 +1,16 @@
+platform :ios, '10.0'
+#指定源
+source 'https://github.com/CocoaPods/Specs.git'
+
+# 辨识是哪个workspace，没有则创建名为XQUIKit的workspace
+workspace 'XQUIKit'
+
+# 辨识是哪个target
+target 'Example' do
+    # 辨识是哪个项目
+    project 'Example/Example.xcodeproj'
+    # 引入私有库（同级路径）
+    pod 'XQUIKit', :path => './'
+    pod 'XQUIKit/RefreshBar', :path => './'
+
+end

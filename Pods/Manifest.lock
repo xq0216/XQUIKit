@@ -1,0 +1,28 @@
+PODS:
+  - SnapKit (5.0.1)
+  - XQUIKit (0.0.1):
+    - XQUIKit/Core (= 0.0.1)
+  - XQUIKit/Core (0.0.1)
+  - XQUIKit/RefreshBar (0.0.1):
+    - SnapKit (~> 5.0.0)
+    - XQUIKit/Core
+
+DEPENDENCIES:
+  - XQUIKit (from `./`)
+  - XQUIKit/RefreshBar (from `./`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  XQUIKit:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  XQUIKit: e50b10c6f4357e4e66c215f0a88c0b06ecc7064e
+
+PODFILE CHECKSUM: 0a74979f4c3616e0d1ecf4c98cc10e2978b791bb
+
+COCOAPODS: 1.8.4
