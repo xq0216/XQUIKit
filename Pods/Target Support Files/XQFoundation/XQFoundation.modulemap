@@ -1,0 +1,6 @@
+module XQFoundation {
+  umbrella header "XQFoundation-umbrella.h"
+
+  export *
+  module * { export * }
+}

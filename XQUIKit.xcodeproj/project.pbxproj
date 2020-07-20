@@ -11,7 +11,11 @@
 		805BCB1024B45C65006BA421 /* XQUIKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 805BCB0F24B45C65006BA421 /* XQUIKit.podspec */; };
 		805BCB5A24B46A92006BA421 /* XQBarStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BCB5624B46A92006BA421 /* XQBarStatus.swift */; };
 		805BCB5B24B46A92006BA421 /* XQRefreshBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BCB5724B46A92006BA421 /* XQRefreshBar.swift */; };
-		805BCB5C24B46A92006BA421 /* XQExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BCB5924B46A92006BA421 /* XQExtension.swift */; };
+		808FBC7324C5829D000FDD43 /* XQContactsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808FBC7224C5829D000FDD43 /* XQContactsManagerProtocol.swift */; };
+		808FBC7924C583B0000FDD43 /* XQContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808FBC7824C583B0000FDD43 /* XQContactsModel.swift */; };
+		808FBC7B24C5866F000FDD43 /* XQContactsUIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808FBC7A24C5866F000FDD43 /* XQContactsUIManager.swift */; };
+		808FBC7D24C59A5A000FDD43 /* XQContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808FBC7C24C59A5A000FDD43 /* XQContactsManager.swift */; };
+		80AAA3B624BC60F400337AC7 /* XQUIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAA3B524BC60F400337AC7 /* XQUIKitExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +24,11 @@
 		805BCB0F24B45C65006BA421 /* XQUIKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XQUIKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		805BCB5624B46A92006BA421 /* XQBarStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XQBarStatus.swift; sourceTree = "<group>"; };
 		805BCB5724B46A92006BA421 /* XQRefreshBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XQRefreshBar.swift; sourceTree = "<group>"; };
-		805BCB5924B46A92006BA421 /* XQExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XQExtension.swift; sourceTree = "<group>"; };
+		808FBC7224C5829D000FDD43 /* XQContactsManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XQContactsManagerProtocol.swift; sourceTree = "<group>"; };
+		808FBC7824C583B0000FDD43 /* XQContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XQContactsModel.swift; sourceTree = "<group>"; };
+		808FBC7A24C5866F000FDD43 /* XQContactsUIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XQContactsUIManager.swift; sourceTree = "<group>"; };
+		808FBC7C24C59A5A000FDD43 /* XQContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XQContactsManager.swift; sourceTree = "<group>"; };
+		80AAA3B524BC60F400337AC7 /* XQUIKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XQUIKitExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +70,10 @@
 		805BCB5424B46A92006BA421 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				80AAA3B424BC60F400337AC7 /* Common */,
 				80488FE124B8112800EC1392 /* Assets */,
 				805BCB5524B46A92006BA421 /* RefreshBar */,
-				805BCB5824B46A92006BA421 /* Common */,
+				808FBC7424C582A2000FDD43 /* Contacts */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -78,10 +87,21 @@
 			path = RefreshBar;
 			sourceTree = "<group>";
 		};
-		805BCB5824B46A92006BA421 /* Common */ = {
+		808FBC7424C582A2000FDD43 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				805BCB5924B46A92006BA421 /* XQExtension.swift */,
+				808FBC7224C5829D000FDD43 /* XQContactsManagerProtocol.swift */,
+				808FBC7A24C5866F000FDD43 /* XQContactsUIManager.swift */,
+				808FBC7824C583B0000FDD43 /* XQContactsModel.swift */,
+				808FBC7C24C59A5A000FDD43 /* XQContactsManager.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		80AAA3B424BC60F400337AC7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				80AAA3B524BC60F400337AC7 /* XQUIKitExtension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -118,6 +138,7 @@
 				TargetAttributes = {
 					8013663F24B33053007BC9BA = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -157,8 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				805BCB5B24B46A92006BA421 /* XQRefreshBar.swift in Sources */,
+				808FBC7B24C5866F000FDD43 /* XQContactsUIManager.swift in Sources */,
 				805BCB5A24B46A92006BA421 /* XQBarStatus.swift in Sources */,
-				805BCB5C24B46A92006BA421 /* XQExtension.swift in Sources */,
+				808FBC7924C583B0000FDD43 /* XQContactsModel.swift in Sources */,
+				80AAA3B624BC60F400337AC7 /* XQUIKitExtension.swift in Sources */,
+				808FBC7D24C59A5A000FDD43 /* XQContactsManager.swift in Sources */,
+				808FBC7324C5829D000FDD43 /* XQContactsManagerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DLKJ2C23M3;
 				INFOPLIST_FILE = XQUIKit/Info.plist;
@@ -292,6 +318,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xq.XQUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DLKJ2C23M3;
 				INFOPLIST_FILE = XQUIKit/Info.plist;

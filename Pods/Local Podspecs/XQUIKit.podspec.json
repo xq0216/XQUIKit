@@ -39,6 +39,11 @@
             "Source/Assets/*.xcassets"
           ]
         }
+      },
+      "dependencies": {
+        "XQFoundation": [
+          "~> 0.0.1"
+        ]
       }
     },
     {
@@ -52,6 +57,18 @@
         ]
       },
       "source_files": "Source/RefreshBar/*.swift"
+    },
+    {
+      "name": "Contacts",
+      "dependencies": {
+        "XQUIKit/Core": [
+
+        ],
+        "SnapKit": [
+          "~> 5.0.0"
+        ]
+      },
+      "source_files": "Source/Contacts/*.swift"
     }
   ],
   "swift_version": "4.0"

@@ -33,12 +33,20 @@ Pod::Spec.new do |spec|
        ss.ios.resource_bundle = {
            'XQUIKit' => ['Source/Assets/*.xcassets']
        }
+       ss.dependency 'XQFoundation', '~> 0.0.1'
    end
   
   # 刷新组件
    spec.subspec 'RefreshBar' do |ss|
        ss.dependency 'XQUIKit/Core'
        ss.source_files = 'Source/RefreshBar/*.swift'
+       ss.dependency 'SnapKit', '~> 5.0.0'
+   end
+
+   # 通讯录组件
+   spec.subspec 'Contacts' do |ss|
+       ss.dependency 'XQUIKit/Core'
+       ss.source_files = 'Source/Contacts/*.swift'
        ss.dependency 'SnapKit', '~> 5.0.0'
    end
 

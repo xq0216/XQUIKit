@@ -9,9 +9,11 @@
 import UIKit
 import Foundation
 import SnapKit
+import XQFoundation
 
 public typealias DidClickRefreshBtn = (_ status: XQBarStatus) -> Void
 
+private let kRotationAnimationKey: String = "XQUIKit_rotationAnimation"
 private let fShowDuration: Double = 0.3
 private let fHideDuration: Double = 0.25
 private let fShowSucessedDuration: Double = 2.0
@@ -107,11 +109,11 @@ public class XQRefreshBar: UIView {
     private func updateAnimationWithStatus(_ status: XQBarStatus) {
         switch status {
         case .failed:
-            iconImgView.stopRotate()
+            _ = iconImgView.stopRepeatRotate(key:kRotationAnimationKey)
         case .refreshing:
-            iconImgView.startRotate()
+            _ = iconImgView.startRepeatRotate(key:kRotationAnimationKey)
         case .sucessed:
-            iconImgView.stopRotate()
+            _ = iconImgView.stopRepeatRotate(key:kRotationAnimationKey)
             iconImgView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
             UIView.animate(withDuration: fShowDuration,
                             delay: 0.2,

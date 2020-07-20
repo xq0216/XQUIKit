@@ -19,7 +19,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 //        itemTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         itemTableView.tableFooterView = UIView()
-        dataAry.append(contentsOf: [CellData("RefreshBar", subTitle: "刷新栏", details: "RefreshBarViewController")])
+        dataAry.append(contentsOf: [CellData("RefreshBar", subTitle: "刷新栏", details: "RefreshBarViewController"),
+                                    CellData("Contacts", subTitle: "通讯录", details: "ContactsViewController")])
     }
 }
 

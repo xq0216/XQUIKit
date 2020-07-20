@@ -2,6 +2,7 @@ platform :ios, '10.0'
 #指定源
 source 'https://github.com/CocoaPods/Specs.git'
 
+
 # 辨识是哪个workspace，没有则创建名为XQUIKit的workspace
 workspace 'XQUIKit'
 
@@ -12,5 +13,7 @@ target 'Example' do
     # 引入私有库（同级路径）
     pod 'XQUIKit', :path => './'
     pod 'XQUIKit/RefreshBar', :path => './'
+    pod 'XQUIKit/Contacts', :path => './'
+    pod 'SnapKit'
 
 end

@@ -15,6 +15,7 @@
 		805BCB4824B469E1006BA421 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 805BCB4724B469E1006BA421 /* Assets.xcassets */; };
 		805BCB4B24B469E1006BA421 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 805BCB4924B469E1006BA421 /* LaunchScreen.storyboard */; };
 		805BCB5324B46A3C006BA421 /* CellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BCB5224B46A3B006BA421 /* CellDataModel.swift */; };
+		808FBC7F24C59C9E000FDD43 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808FBC7E24C59C9E000FDD43 /* ContactsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		805BCB4A24B469E1006BA421 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		805BCB4C24B469E1006BA421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		805BCB5224B46A3B006BA421 /* CellDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDataModel.swift; sourceTree = "<group>"; };
+		808FBC7E24C59C9E000FDD43 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		82EE6A25A9E40EFC771936BF /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8B6B2AB7828DE59B884D21 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 				805BCB3E24B469E0006BA421 /* AppDelegate.swift */,
 				805BCB4224B469E0006BA421 /* ViewController.swift */,
 				80488FDF24B80DD400EC1392 /* RefreshBarViewController.swift */,
+				808FBC7E24C59C9E000FDD43 /* ContactsViewController.swift */,
 				805BCB5224B46A3B006BA421 /* CellDataModel.swift */,
 				805BCB4424B469E0006BA421 /* Main.storyboard */,
 				805BCB4724B469E1006BA421 /* Assets.xcassets */,
@@ -214,6 +217,7 @@
 				805BCB4324B469E0006BA421 /* ViewController.swift in Sources */,
 				805BCB3F24B469E0006BA421 /* AppDelegate.swift in Sources */,
 				805BCB5324B46A3C006BA421 /* CellDataModel.swift in Sources */,
+				808FBC7F24C59C9E000FDD43 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
