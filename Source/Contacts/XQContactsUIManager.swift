@@ -9,25 +9,22 @@
 import UIKit
 import ContactsUI
 
+public typealias XQContactsSelectedHandler = (XQContactsModel) -> Void
+public typealias XQContactsCancelHandler = () -> Void
+
 /// >= iOS9，使用ContactsUI调用系统通讯录UI选择获取联系人信息
-class XQContactsUIManager: NSObject, XQContactsManagerProtocol {
-    private let contactPicker: CNContactPickerViewController
+class XQContactsUIManager: NSObject {
     // 遵循协议申明handler
     var selectedHandler: XQContactsSelectedHandler?
     var cancelHandler: XQContactsCancelHandler?
-    // 遵循协议实现构造器
-    required init(selected: XQContactsSelectedHandler?, cancel:XQContactsCancelHandler?){
+    // 显示界面
+    func showPageOnTarget(_ viewController: UIViewController, selected: XQContactsSelectedHandler?, cancel:XQContactsCancelHandler?){
         selectedHandler = selected
         cancelHandler = cancel
-        contactPicker = CNContactPickerViewController.init()
-        super.init()
-        // TODO: 目前选中联系人进入详情，无法选中联系人返回
+
+        let contactPicker = CNContactPickerViewController.init()
         contactPicker.predicateForSelectionOfContact = NSPredicate(value: true)
         contactPicker.delegate = self
-    }
-
-    // 显示界面
-    func showPageOnTarget(viewController: UIViewController){
         viewController.present(contactPicker, animated: true, completion: nil)
     }
 }

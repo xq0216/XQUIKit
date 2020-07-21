@@ -9,9 +9,9 @@
 import UIKit
 import SnapKit
 import XQUIKit
+import ContactsUI
 
-class ContactsViewController: UIViewController {
-
+class ContactsViewController: UIViewController, CNContactPickerDelegate {
     lazy var contentLabel: UILabel = {
         return UILabel.init()
     }()
@@ -20,17 +20,9 @@ class ContactsViewController: UIViewController {
         view.backgroundColor = .white
         
         let btn = UIButton.init(type: .custom)
-        btn.backgroundColor = .green
+        btn.backgroundColor = .blue
         btn.setTitle("选择联系人", for: .normal)
-        btn.addEvent { (aBtn) in
-            let manager:XQContactsManager = XQContactsManager.init()
-            manager.showContactsPage(self, selected: {[weak self] (model) in
-                self?.contentLabel.text = model.familyName
-//                print(model.familyName)
-            }) {
-                 print("cancel")
-            }
-        }
+        btn.addTarget(self, action: #selector(clickBtn), for: .touchUpInside)
         view.addSubview(btn)
         btn.snp.makeConstraints { (maker) in
             maker.centerX.equalToSuperview()
@@ -50,16 +42,13 @@ class ContactsViewController: UIViewController {
 
 
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func clickBtn() {
+        // 弹出系统联系人界面
+        XQContactsManager.shared.showPageOnTarget(self, selected: {[weak self] (model) in
+                self?.contentLabel.text = model.familyName
+            }) {
+                 print("xq-cancel")
+            }
     }
-    */
-
 }
